@@ -3,7 +3,7 @@ cat /usr/share/dict/words | sort > ordered.txt
 cat /usr/share/dict/words | sort -r > reverse-ordered.txt
 cat /usr/share/dict/words | sort -R > random.txt
 rm output.csv
-echo Sort Name,Date and Time,Test Number,Git Branch,Git Hash,Command Line Executed,Text File,Count of Strings,Type of File,Execution Time (real, to nearest ms) > output.csv
+echo -e 'Sort Name,Date and Time,Test Number,Git Branch,Git Hash,Command Line Executed,Text File,Count of Strings,Type of File,Execution Time (real, to nearest ms)' > output.csv
 rm ~/www/Digital\ Portfolio/output.csv
 cd BubbleSort
 build

@@ -1,3 +1,5 @@
+import Foundation;
+
 func getStandardIn() -> [String] {
     var arr = [String]();
     while let line = readLine() {
@@ -12,7 +14,7 @@ func selectionSort(_ e:[String]) -> [String] {
         var swaps = 0;
         var minIndex = i;
         for j in i+1..<arr.count {
-            if (arr[minIndex] > arr[j]) {
+            if (arr[minIndex].compare(arr[j], options: [.caseInsensitive, .diacriticInsensitive]) == .orderedDescending) {
                 minIndex = j;
             }
         }
