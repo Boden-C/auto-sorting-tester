@@ -30,6 +30,6 @@ chmod u+x script.sh
 
 Edit the code around in script.sh to choose what files you want to be runned by the code.
 
-After editing the files, run ./script.sh and wait. *this will take a while*
+After editing the files, run .`/script.sh` and wait. *this will take a while*
 
-It outputs to output.csv. It copies this file to your root of Digital Portfolio website. Go to Digital%20Portfolio/output.csv to download.
+It outputs to `output.csv`. It copies this file to your root of Digital Portfolio website. Go to `Digital%20Portfolio/output.csv` to download.
