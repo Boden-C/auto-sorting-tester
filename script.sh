@@ -12,8 +12,8 @@ build
 cd ../SelectionSort
 build
 cd ..
-#read -p "Enter FULL location of your own sorting repository (example: optimal-sort/a.out): " -r
-for sort in alphabetical-sort/a.out InsertionSort/.build/debug/Simple SelectionSort/.build/debug/Simple       
+read -p "Enter FULL location of your own sorting repository (example: optimal-sort/a.out): " -r
+for sort in $REPLY InsertionSort/.build/debug/Simple SelectionSort/.build/debug/Simple       
 do
     echo Going to $sort...
     for order in ordered reverse-ordered random
