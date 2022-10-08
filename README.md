@@ -51,7 +51,7 @@ If you don't want to test it, then you can input any fake name. The test would f
 
 ## WARNINGS
 - Running the script again would OVERWRITE the previous `output.csv`. If you want to save the previous results, download it first.
-- Running the script would create its own files, called `ordered.txt` `reverse-ordered.txt` `random.txt`. If you care about these files, or want to keep your own, edit the script and change this.
+- Running the script would create its own files, called `ordered.txt` `reverse-ordered.txt` `random.txt` and `temp.txt`. If you care about these files, or want to keep your own, edit the script and change this.
 - You can cancel in the middle and it will leave a half completed `output.csv` file. To copy to website and download it, paste the following code into the terminal:
 ```
 cp output.csv ~/www/Digital\ Portfolio/output.csv
