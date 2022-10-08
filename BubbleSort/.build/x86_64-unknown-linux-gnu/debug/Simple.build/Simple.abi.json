@@ -12,8 +12,8 @@
     },
     {
       "kind": "Function",
-      "name": "getStandardIn",
-      "printedName": "getStandardIn()",
+      "name": "bubbleSort",
+      "printedName": "bubbleSort(_:_:)",
       "children": [
         {
           "kind": "TypeNominal",
@@ -28,19 +28,7 @@
             }
           ],
           "usr": "s:Sa"
-        }
-      ],
-      "declKind": "Func",
-      "usr": "s:6Simple13getStandardInSaySSGyF",
-      "mangledName": "$s6Simple13getStandardInSaySSGyF",
-      "moduleName": "Simple",
-      "funcSelfKind": "NonMutating"
-    },
-    {
-      "kind": "Function",
-      "name": "bubbleSort",
-      "printedName": "bubbleSort(_:)",
-      "children": [
+        },
         {
           "kind": "TypeNominal",
           "name": "Array",
@@ -71,10 +59,70 @@
         }
       ],
       "declKind": "Func",
-      "usr": "s:6Simple10bubbleSortySaySSGACF",
-      "mangledName": "$s6Simple10bubbleSortySaySSGACF",
+      "usr": "s:6Simple10bubbleSortySaySSGAC_ACtF",
+      "mangledName": "$s6Simple10bubbleSortySaySSGAC_ACtF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Var",
+      "name": "arr",
+      "printedName": "arr",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Array",
+          "printedName": "[Swift.String]",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "usr": "s:Sa"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple3arrSaySSGvp",
+      "mangledName": "$s6Simple3arrSaySSGvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Var",
+      "name": "folded",
+      "printedName": "folded",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Array",
+          "printedName": "[Swift.String]",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "usr": "s:Sa"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple6foldedSaySSGvp",
+      "mangledName": "$s6Simple6foldedSaySSGvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
     }
   ],
   "json_format_version": 6

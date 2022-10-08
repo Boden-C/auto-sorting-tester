@@ -1,27 +1,23 @@
 import Foundation;
 
-func getStandardIn() -> [String] {
-    var arr = [String]();
-    while let line = readLine() {
-        arr.append(line);
-    }
-    return arr;
-}
-
-func selectionSort(_ e:[String]) -> [String] {
-    var arr = e; var totalSwaps = 0;
+func selectionSort(_ e:[String], _ f:[String]) -> [String] {
+    var arr = e; var folded = f;
     for i in 0..<arr.count-1 {
-        var swaps = 0;
         var minIndex = i;
         for j in i+1..<arr.count {
-            if (arr[minIndex].compare(arr[j], options: [.caseInsensitive, .diacriticInsensitive]) == .orderedDescending) {
+            if (folded[minIndex] > folded[j]) {
                 minIndex = j;
             }
         }
+        folded.swapAt(i, minIndex)
         arr.swapAt(i, minIndex);
-        swaps += 1; totalSwaps += swaps;
     }
     return arr;
 }
-
-print(selectionSort(getStandardIn()));
+var arr = [String]();
+var folded = [String]();
+while let line = readLine() {
+    arr.append(line);
+    folded.append(line.lowercased().folding(options:.diacriticInsensitive,locale:Locale.current));
+}
+print(selectionSort(arr, folded));

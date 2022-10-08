@@ -1,35 +1,68 @@
+
 import Foundation;
 
-func getStandardIn() -> [String] {
-    var arr = [String]();
-    while let line = readLine() {
-        arr.append(line);
-    }
-    return arr;
-}
-
-func bubbleSort(_ e:[String]) -> [String] {
+func bubbleSort(_ e:[String], _ f:[String]) -> [String] {
     guard (e.count > 1) else {
-        print(e);
         return e;
     }
-    var totalSwap = 0
-    var totalPass = 0
-    var sorted = e
-    var currentSwap = 0
-    repeat {
-        currentSwap = 0
-        for index in 1..<sorted.count {
-            if sorted[index].compare(sorted[index-1], options:[.caseInsensitive, .diacriticInsensitive]) == .orderedAscending {
-                sorted.swapAt(index-1, index)
-                currentSwap += 1
-                totalSwap += 1
+    var arr = e;
+    var folded = f;
+    for i in 0..<arr.count {
+        var isSorted = true;
+        for j in 1..<arr.count-1-i { //i number of largest numbers is already sorted at the end, no need to go beyond count-1-i
+            if folded[j] < folded[j-1] {
+                arr.swapAt(j, j-1);
+                folded.swapAt(j, j-1)
+                isSorted = false;
             }
         }
-        totalPass += 1
-    } while currentSwap > 0
-    return sorted;
+        if (isSorted) {
+            break;
+        }
+     }
+    return arr;
+}
+var arr = [String]();
+var folded = [String]();
+while let line = readLine() {
+    arr.append(line)
+    folded.append(line.lowercased().folding(options:.diacriticInsensitive,locale:Locale.current));
+}
+print(bubbleSort(arr, folded));
+
+/*
+func bubbleSort(unsortedArr: [String], endIndex: Int) {
+    var unsortedArr = unsortedArr
+    var endIndex = endIndex
+
+    for upper in 0 ..< unsortedArr.count {
+        if upper != 0 {
+            endIndex -= 1
+        }
+
+        for index in 1 ..< endIndex {
+            if lowerList[index] < lowerList[index - 1] {
+                unsortedArr.swapAt(index, index-1)
+                lowerList.swapAt(index, index-1)
+            }
+        }
+    }
+
+    for i in 0 ..< unsortedArr.count {
+        print(unsortedArr[i])
+    }
 }
 
-print(bubbleSort(getStandardIn()));
 
+
+var unsortedArr = [String]()
+var lowerList = [String]()
+
+while let input = readLine() {
+    unsortedArr.append(input)
+    lowerList.append((input.lowercased()).folding(options: .diacriticInsensitive, locale: Locale.current))
+}
+
+bubbleSort(unsortedArr: unsortedArr, endIndex: unsortedArr.count)
+
+*/
