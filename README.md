@@ -1,4 +1,6 @@
 # Automatic Sorting Tester
+![Static Badge](https://img.shields.io/badge/License-MIT-green)
+![Static Badge](https://img.shields.io/badge/Version-0.1.0--Alpha-yellow)
 This script would test all 360 runs and output to a .csv file to be downloaded and imported
 
 ## If you HAVEN'T started at all yet, copy and paste this code into your Projects directory:
